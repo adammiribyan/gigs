@@ -1,7 +1,23 @@
-// Place all the styles related to the gigs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$header-link-boder-color: #4d769f;
 
 body.gigs {
-  // Place scoped styles here
+  ul#gigs {
+    margin-right: 40px;
+    position: relative;
+    
+    li {
+      border-bottom: 1px solid #efede5;
+      
+      &:last-child { border-bottom: none; }
+      
+      &.gig {
+        h2 {
+          a {
+            text-decoration: none;
+            border-bottom: 1px solid $header-link-boder-color;
+          }
+        }
+      }
+    }
+  }
 }

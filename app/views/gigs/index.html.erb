@@ -1,27 +1,9 @@
-<h1>Listing gigs</h1>
+<% title t(:title, scope: [:gigs, :index]) %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Place</th>
-    <th>Time</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1><%= t(:title, scope: [:gigs, :index]) %></h1>
 
-<% @gigs.each do |gig| %>
-  <tr>
-    <td><%= gig.name %></td>
-    <td><%= gig.place %></td>
-    <td><%= gig.time %></td>
-    <td><%= link_to 'Show', gig %></td>
-    <td><%= link_to 'Edit', edit_gig_path(gig) %></td>
-    <td><%= link_to 'Destroy', gig, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+<ul id="gigs">
+  <%= render @gigs %>
+</ul>
 
-<br />
-
-<%= link_to 'New Gig', new_gig_path %>
+<%= link_to t(:new_gig, scope: [:gigs, :index]), new_gig_path %>

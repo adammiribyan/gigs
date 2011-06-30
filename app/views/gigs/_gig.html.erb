@@ -1,0 +1,4 @@
+<%= content_tag_for(:li, gig) do %>
+  <h2><%= link_to gig.name, gig_path(gig) %></h2>
+  <p><%= l gig.time.to_time, :format => :long %></p>
+<% end %>
