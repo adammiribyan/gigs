@@ -1,13 +1,13 @@
 <%= simple_form_for(@gig) do |f| %>
   <%= f.error_notification %>
 
-  <div class="inputs">
-    <%= f.input :name %>
+  <fieldset class="last-child">
+    <%= f.input :name, :autofocus => true %>
     <%= f.input :place %>
     <%= f.input :time %>
-  </div>
+  </fieldset>
 
   <div class="actions">
-    <%= f.button :submit %>
+    <%= f.submit t(:create_gig, scope: [:gigs, :new]) %> или <%= link_to t(:cancel, scope: [:gigs]), gigs_path %>
   </div>
 <% end %>

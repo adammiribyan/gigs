@@ -1,5 +1,5 @@
-<h1>New gig</h1>
+<% title t(:title, scope: [:gigs, :new]) %>
 
-<%= render 'form' %>
+<h1><%= t(:title, scope: [:gigs, :new]) %></h1>
 
-<%= link_to 'Back', gigs_path %>
+<%= render "form" %>
