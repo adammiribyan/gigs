@@ -1,0 +1,9 @@
+.bundle
+.sass-cache/
+.DS_Store
+.redcar
+config/database.yml
+log/*.log
+tmp/**/*
+tmp/
+tmp/restart.txt

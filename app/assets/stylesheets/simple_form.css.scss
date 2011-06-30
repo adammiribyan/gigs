@@ -1,0 +1,112 @@
+.simple_form {  
+  letter-spacing: normal;
+  position: relative;
+  
+  #a_name {
+    font-size: 1.5em;
+  }
+  
+  fieldset { 
+    &.last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
+    &.small { width: 77%; }
+    &.right { float: right; }
+    &.left { float: left; }
+    
+    width: 100%;
+    border-bottom: 1px dashed #ededed;    
+    padding: 10px 0px;
+    margin-bottom: 10px;
+  }   
+  
+  .input {
+    padding-bottom: 16px;
+  }
+  
+  .hint {
+    color: #999;
+    display: inline-block;
+    font-size: 0.9166em;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-left: 25%;
+    
+    a {       
+      &:link,
+      &:visited {
+        color: inherit;
+        text-decoration: underline;
+        padding: 1px;
+      }
+      
+      &:hover {
+        color: white;
+        background-color: #444;
+        text-decoration: none;          
+      }
+    }
+  }
+  
+  .error {
+    color: red;
+    display: block;
+    margin-left: 25%;
+  }
+  
+  label {
+    display: inline-block;
+    font-weight: bold;
+    width: 25%;
+    vertical-align: top;
+    padding-top: 0.0833em;
+  }    
+  
+  textarea {
+    height: 5em;
+    letter-spacing: normal;
+  }
+  
+  .string,
+  .numeric,
+  .text,
+  .password {
+    input, textarea {
+      background: white url("https://d1a993iq9azmzq.cloudfront.net/images/bkd_field.gif") repeat-x scroll 50% 0%;
+      border-color: #7C7C7C #C3C3C3 #DDD;
+      border-style: solid;
+      border-width: 1px;
+      color: #222;
+      font-size: 12px;
+      font-weight: normal;
+      padding: 3px;
+      width: 60%;
+    }      
+  }
+  
+  .boolean {      
+    label {
+      display: inline;
+      margin-left: 0.417em;
+      width: 100%;
+      font-weight: normal;
+    }
+  }
+  
+  .radio > span {
+    label {
+      margin-left: 0.417em;
+      font-weight: normal;
+    }
+  }
+  
+  .actions {
+    display: block;
+    margin-top: 20px;
+    border-top: 2px solid #444;
+    padding-top: 13px;
+    padding-left: 2px;
+  }  
+}
