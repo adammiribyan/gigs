@@ -1,6 +1,5 @@
-<h1>Editing gig</h1>
+<% title t(:title, scope: [:gigs, :edit]) %>
 
-<%= render 'form' %>
+<h1><%= t(:title, scope: [:gigs, :edit]) %></h1>
 
-<%= link_to 'Show', @gig %> |
-<%= link_to 'Back', gigs_path %>
+<%= render "form" %>
