@@ -1,0 +1,12 @@
+require "autotest/restart"
+require 'autotest/growl'
+
+Autotest::Growl::clear_terminal = false
+Autotest::Growl::sticky_failure_notifications = true
+# Autotest::Growl::show_modified_files = true
+
+Autotest.add_hook :initialize do |autotest|
+  %w{.git redcar .svn .hg .DS_Store ._* vendor tmp log doc}.each do |exception|
+    autotest.add_exception(exception)
+  end
+end

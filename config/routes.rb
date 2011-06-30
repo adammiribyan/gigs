@@ -1,4 +1,6 @@
 Gigs::Application.routes.draw do
+  resources :gigs
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
