@@ -1,0 +1,83 @@
+$header-border-color: #CC0000 !default;
+
+#layout {
+  position: absolute;
+  width: 70%;
+  right: 0;
+  margin: 30px 0;
+  padding-bottom: 10em;
+    
+  &>h1 {
+    font-size: 2.333em;
+    font-weight: bold;
+    border-bottom: 3px solid $header-border-color;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 0 white;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
+div#home {
+  position: absolute;
+  width: 70%;
+  right: 0;
+  
+  a {
+    &:link, &:visited {
+      text-decoration: none;
+      padding: 0 0 3px 0;
+      font-size: 1.6667em;
+      color: black;     
+    }
+    
+    &:hover {
+      background-color: #fcfcfc;
+      border-bottom: 1px solid black;
+      color: black;
+    }
+  }
+}
+
+div#footnotes {
+  display: block;
+  position: absolute;
+  margin: 0 0 0 -37%;
+  
+  hr {
+    border: 0 hidden;
+    border-top: 1px solid #D6D6D6;
+    clear: both;
+    height: 0;
+    margin-bottom: 1.25em;
+  }
+}
+
+.controls {
+  position: relative;
+  display: block;
+  
+  .delete {
+    display: inline-block;
+    margin-right: 0.5833em;
+    
+    a { padding: 0; }
+    
+    .icon {
+      width: 11px;
+      height: 14px;
+      background: url(<%= asset_path "icon_trash.png" %>) no-repeat 0 0;
+      position: relative;
+      top: 2px;
+      display: block;
+      z-index: 1;
+      
+      // trash icon buttonized
+      opacity: 0.5;      
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

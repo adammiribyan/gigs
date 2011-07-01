@@ -1,20 +1,19 @@
+<% title t(:title, scope: [:gigs, :show], gig_name: @gig.name) %>
+
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @gig.name %>
-</p>
+<h1><%= @gig.name %></h1>
 
-<p>
-  <b>Place:</b>
-  <%= @gig.place %>
-</p>
-
-<p>
-  <b>Time:</b>
-  <%= @gig.time %>
-</p>
-
-
-<%= link_to 'Edit', edit_gig_path(@gig) %> |
-<%= link_to 'Back', gigs_path %>
+<%= content_for :footnotes do %>
+  <%= content_tag_for(:ul, @gig) do %>
+    <li><span class="label">Где?</span><%= @gig.place %>.</li>
+    <li><span class="label">Когда?</span><%= l @gig.time.to_time %>.</li>
+  <% end %>
+  <hr />
+  <div class="controls">          
+    <span class="delete">
+      <%= link_to content_tag(:span, "", :class => "icon"), @gig, :confirm => "#{t(:are_you_sure, scope: [:gigs])}", :method => :delete %>
+    </span>
+    <%= link_to "Правка", edit_gig_path(@gig), :class => "admin" %>
+  </div>
+<% end %>

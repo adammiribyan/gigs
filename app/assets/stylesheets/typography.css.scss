@@ -38,6 +38,22 @@ a {
     background-color: $link-hover-background-color;
     text-decoration: none !important;
   }
+  
+  &.admin {
+    &:link {
+      color: #CC0000;  
+    }
+    
+    &:visited {
+      color: #CC0000;
+    }
+    
+    &:hover {
+      color: white;
+      background-color: #CC0000;
+      text-decoration: none !important;
+    }
+  }
 }
 
 p {

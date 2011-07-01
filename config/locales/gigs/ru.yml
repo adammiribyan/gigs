@@ -1,6 +1,8 @@
 ru:
   gigs:
-    cancel: "вернуться назад"    
+    cancel: "вернуться назад"
+    edit: "Правка"
+    are_you_sure: "Вы уверены?"
     index:
       title: "Концерты"
       new_gig: "Новый концерт"
@@ -14,3 +16,5 @@ ru:
     edit:
       title: "Изменение информации о концерте"
       create_gig: "Сохранить концерт"
+    show:
+      title: "Концерт %{gig_name}"

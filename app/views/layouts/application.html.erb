@@ -10,10 +10,15 @@
   </head>
 
   <body class="<%= params.values_at(:controller, :action).join(' ') %>">
-    <div id="layout">
-      
+    <%= link_to_home %>
+    
+    <div id="layout">      
       <%= yield %>
       
-    </div>    
+      <div id="footnotes">
+        <%= yield :footnotes %>
+      </div>
+    </div> 
+    
   </body>
 </html>

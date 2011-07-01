@@ -20,4 +20,21 @@ body.gigs {
       }
     }
   }
+  
+  ul.gig {
+    font-size: 1.333em;
+    position: relative;
+    margin-right: 40px;
+    line-height: 1.9;
+    margin-bottom: 0.75em;
+    
+    li {
+      .label {
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 0.4166em;
+        color: #999;
+      }
+    }
+  }
 }
