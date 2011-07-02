@@ -1,0 +1,33 @@
+<%= simple_form_for([@gig, @song]) do |f| %>
+  <%= f.error_notification %>
+  
+  <fieldset>
+    <%= f.input :name, autofocus: true %>
+    <%= f.input :artist %>
+  </fieldset>
+  
+  <fieldset class="last-child">
+    <%= f.input :weborama_url, hint: t(:weborama_url_html, scope: [:simple_form, :hints, :song]) %>
+    <%= f.input :lyrics %>
+    <%= f.input :chords_url %>
+  </fieldset>
+  
+  <div class="actions">
+    <%= f.submit t(:save_song, scope: [:songs, (controller.action_name == "new" ? :new : :edit)]) %> или <%= link_to t(:cancel), :back %>
+  </div>
+<% end %>
+
+<%= javascript_tag do %>
+  $('textarea').autoResize({
+    // On resize:
+    onResize : function() {
+      $(this).css({opacity:0.8});
+    },
+    // After resize:
+    animateCallback : function() {
+      $(this).css({opacity:1});
+    },
+    // Quite slow animation:
+    animateDuration : 500
+  });
+<% end %>  

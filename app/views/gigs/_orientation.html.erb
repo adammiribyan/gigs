@@ -1,0 +1,4 @@
+<%= content_tag_for(:ul, @gig) do %>
+  <li><span class="label"><%= t(:where) %></span><%= @gig.place %>.</li>
+  <li><span class="label"><%= t(:when) %></span><%= l @gig.time.to_time %>.</li>
+<% end %>

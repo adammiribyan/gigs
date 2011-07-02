@@ -16,7 +16,11 @@
       <%= yield %>
       
       <div id="footnotes">
-        <%= yield :footnotes %>
+        <% if content_for? :footnotes %>
+          <%= yield :footnotes %>
+        <% else %>
+          
+        <% end %>
       </div>
     </div> 
     

@@ -21,20 +21,29 @@ body.gigs {
     }
   }
   
-  ul.gig {
+  ol.gig_songs {
+    list-style: decimal;
+    line-height: 1.7;
     font-size: 1.333em;
-    position: relative;
-    margin-right: 40px;
-    line-height: 1.9;
-    margin-bottom: 0.75em;
+    margin-bottom: 1.5em;
+  }
+}
+
+ul.gig {
+  font-size: 1.333em;
+  position: relative;
+  margin-right: 40px;
+  line-height: 1.9;
+  margin-bottom: 0.75em;
+  
+  li {
+    padding-left: 1px;
     
-    li {
-      .label {
-        font-weight: bold;
-        display: inline-block;
-        margin-right: 0.4166em;
-        color: #999;
-      }
+    .label {
+      font-weight: bold;
+      display: inline-block;
+      margin-right: 0.4166em;
+      color: #999;
     }
   }
 }

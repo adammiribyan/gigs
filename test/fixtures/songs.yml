@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  artist: MyString
+  code: MyText
+  lyrics: MyText
+  chords_url: MyString
+
+two:
+  name: MyString
+  artist: MyString
+  code: MyText
+  lyrics: MyText
+  chords_url: MyString

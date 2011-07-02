@@ -1,5 +1,7 @@
 class Gig < ActiveRecord::Base
-  default_scope :order => "created_at DESC"
+  default_scope order: "created_at DESC"
   
-  validates :name, :place, :time, :presence => true  
+  has_many :songs, :dependent => :destroy
+  
+  validates :name, :place, :time, presence: true  
 end

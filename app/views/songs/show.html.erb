@@ -1,0 +1,36 @@
+<% title t(:title, scope: [:gigs, :show], gig_name: @gig.name) %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <small class="artist"><%= @song.artist %></small>
+  <%= @song.name %>
+</h1>
+
+<%= div_for @song do %>
+  <%= link_to @song.formated_name, @song.weborama_url, class: "song_player" %>
+  
+  <div class="song_lyrics">
+    <%= simple_format @song.lyrics %>
+  </div>
+<% end %>
+
+<%= content_for :footnotes do %>
+  <h3><%= link_to @gig.name, @gig, class: "admin" %></h3>
+  <%= render partial: "gigs/orientation" %>
+  <% if @song.chords_url.present? %>
+    <hr />
+    <p>
+      — Мне лень подбирать мелодии!<br />
+      — <%= link_to "Аккорды", @song.chords_url %>, сэр.
+    </p>
+  <% end %>
+  <hr />
+  <div class="controls" style="margin-left: 2px;">       
+    <span class="delete">
+      <%= link_to content_tag(:span, "", :class => "icon"), @song, :confirm => "#{t(:are_you_sure)}", :method => :delete %>
+    </span>
+    <%= link_to t(:edit), edit_song_path(@song), :class => "admin" %>
+  </div>
+<% end %>
+

@@ -1,0 +1,3 @@
+<%= content_tag_for(:li, song) do %>
+  <%= "#{song.artist}: #{link_to song.name, song}".html_safe %>
+<% end %>

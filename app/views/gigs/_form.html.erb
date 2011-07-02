@@ -8,6 +8,6 @@
   </fieldset>
 
   <div class="actions">
-    <%= f.submit t(:create_gig, scope: [:gigs, (controller.action_name == "new" ? :new : :edit)]) %> или <%= link_to t(:cancel, scope: [:gigs]), :back %>
+    <%= f.submit t(:save_gig, scope: [:gigs, (controller.action_name == "new" ? :new : :edit)]) %> или <%= link_to t(:cancel), :back %>
   </div>
 <% end %>

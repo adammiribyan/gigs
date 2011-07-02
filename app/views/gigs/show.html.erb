@@ -5,15 +5,22 @@
 <h1><%= @gig.name %></h1>
 
 <%= content_for :footnotes do %>
-  <%= content_tag_for(:ul, @gig) do %>
-    <li><span class="label">Где?</span><%= @gig.place %>.</li>
-    <li><span class="label">Когда?</span><%= l @gig.time.to_time %>.</li>
-  <% end %>
+  <%= render partial: "orientation" %>
   <hr />
-  <div class="controls">          
+  <div class="controls" style="margin-left: 2px;">       
     <span class="delete">
-      <%= link_to content_tag(:span, "", :class => "icon"), @gig, :confirm => "#{t(:are_you_sure, scope: [:gigs])}", :method => :delete %>
+      <%= link_to content_tag(:span, "", :class => "icon"), @gig, :confirm => "#{t(:are_you_sure)}", :method => :delete %>
     </span>
-    <%= link_to "Правка", edit_gig_path(@gig), :class => "admin" %>
+    <%= link_to t(:edit), edit_gig_path(@gig), :class => "admin" %>
   </div>
 <% end %>
+
+<% if @gig.songs.any? %>
+  <ol class="gig_songs">
+    <%= render partial: "song", collection: @gig.songs, as: "song" %>
+  </ol>
+<% else %>
+  <%= render :partial => "songs/blank" %>
+<% end %>
+
+<%= link_to t(:new_song, scope: [:songs, :index]), new_gig_song_path(gig_id: @gig) %>

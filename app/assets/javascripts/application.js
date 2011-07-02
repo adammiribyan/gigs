@@ -6,4 +6,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery_autoresize
+//= require weborama_inline
 //= require_tree .
