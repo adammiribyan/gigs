@@ -1,7 +1,7 @@
 module Gigs
   module Version
     MAJOR = 0
-    MINOR = 5
+    MINOR = 7
     TINY  = 0
     PRE   = ""
 
