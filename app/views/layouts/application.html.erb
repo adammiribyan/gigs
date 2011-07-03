@@ -10,8 +10,9 @@
   </head>
 
   <body class="<%= params.values_at(:controller, :action).join(' ') %>">
-    <%= link_to_home %>
+    <%= render "facebook_init" %>
     
+    <%= link_to_home %>   
     <div id="layout">      
       <%= yield %>
       

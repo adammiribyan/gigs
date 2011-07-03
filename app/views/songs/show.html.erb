@@ -8,11 +8,19 @@
 </h1>
 
 <%= div_for @song do %>
-  <%= link_to @song.formated_name, @song.weborama_url, class: "song_player" %>
+  <div class="song_player">
+    <%= link_to @song.formated_name, @song.weborama_url %>
+  </div>
   
   <div class="song_lyrics">
     <%= simple_format @song.lyrics %>
   </div>
+  
+  <div class="song_comments">
+    <fb:comments href="<%= request.url %>" num_posts="5" width="500"></fb:comments>
+  </div>
+  
+  <div class="clear"></div>
 <% end %>
 
 <%= content_for :footnotes do %>
