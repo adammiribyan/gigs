@@ -9,7 +9,7 @@
 
 <%= div_for @song do %>
   <div class="song_player">
-    <%= link_to @song.formated_name, @song.weborama_url %>
+    <%= link_to @song.to_s, @song.weborama_url %>
   </div>
   
   <div class="song_lyrics">

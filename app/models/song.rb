@@ -3,7 +3,7 @@ class Song < ActiveRecord::Base
   
   belongs_to :gig
   
-  def formated_name
+  def to_s
     "#{artist}: #{name}"
   end
 end
