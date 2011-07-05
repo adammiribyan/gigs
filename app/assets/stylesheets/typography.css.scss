@@ -1,7 +1,7 @@
-$font-color:     #231F20 !default;
+$font-color:     #ccc !default;
 $quiet-color:    lighten($font-color, 20%) !default;
 $loud-color:     darken($font-color, 13.33%) !default;
-$header-color:   darken($font-color, 6.67%) !default;
+$header-color:   white !default;
 $background-color: #fcfcfc !default;
 
 $link-color:         #4d769f                  !default;
@@ -66,7 +66,7 @@ h1 {
   font-size: 2em; /* 24px */
   line-height: 1.5em; /* 36px */
   margin-top: 1em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5em;  
 }
 
 h2 {

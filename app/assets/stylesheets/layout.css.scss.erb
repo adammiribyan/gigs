@@ -1,5 +1,9 @@
 $header-border-color: #CC0000 !default;
 
+html {
+  background: url(<%= asset_path "blackboard.jpg" %>) repeat;
+}
+
 #layout {
   position: absolute;
   width: 70%;
@@ -13,7 +17,7 @@ $header-border-color: #CC0000 !default;
     border-bottom: 3px solid $header-border-color;
     margin-right: 40px;
     margin-bottom: 30px;
-    text-shadow: 0 1px 0 white;
+    text-shadow: 0 1px 1px #222;
     text-transform: uppercase;
     white-space: nowrap;
   }
@@ -29,13 +33,13 @@ div#home {
       text-decoration: none;
       padding: 0 0 3px 0;
       font-size: 1.6667em;
-      color: black;     
+      color: white;     
     }
     
     &:hover {
-      background-color: #fcfcfc;
-      border-bottom: 1px solid black;
-      color: black;
+      background-color: transparent !important;
+      border-bottom: 1px solid white;
+      color: white;
     }
   }
 }
